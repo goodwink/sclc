@@ -16,10 +16,10 @@ test: &test
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: postgres
+  database: sclc
+  username: sclc
+  password: $0(14!iS+h3\/\/4Ve0ft3hF00tuR3
 
 cucumber:
   <<: *test
