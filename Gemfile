@@ -15,6 +15,7 @@ gem 'builder'
 gem 'hoptoad_notifier'
 gem 'delayed_job', :git => 'git://github.com/collectiveidea/delayed_job.git'
 gem 'simple-navigation'
+gem 'responders'
 
 #TODO: Do something to make these gems not get compiled into the heroku slug
 group :test do

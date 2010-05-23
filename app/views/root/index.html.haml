@@ -1,0 +1,13 @@
+%h1 Welcome
+
+.login
+  Login:
+
+  = render :partial => '/sessions/login'
+  
+.new-user
+  %table
+    %tr
+      %td
+        New users:
+      %td= link_to 'Create an account (requires an invitation)', new_user_path
