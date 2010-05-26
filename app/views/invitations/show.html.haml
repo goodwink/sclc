@@ -1,0 +1,16 @@
+%p
+  %b User:
+  = @invitation.user_id
+%p
+  %b Code:
+  = @invitation.code
+%p
+  %b Email:
+  = @invitation.email
+%p
+  %b Invited user:
+  = @invitation.invited_user_id
+
+= link_to 'Edit', edit_invitation_path(@invitation)
+\|
+= link_to 'Back', invitations_path

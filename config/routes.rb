@@ -1,4 +1,6 @@
 Sclc::Application.routes.draw do |map|
+  resources :invitations
+
   resources :users
 
   root :to => "root#index"

@@ -11,3 +11,6 @@ en:
     users:
       create:
         notice: 'Welcome!  You have successfully created your user.'
+    invitations:
+      create:
+        notice: 'You have sent an invitation!'

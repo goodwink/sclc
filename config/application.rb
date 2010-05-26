@@ -40,6 +40,14 @@ module Sclc
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
-    config.filter_parameters += [:password, :taxid]
+    config.filter_parameters += [:password]
+    
+    ActionMailer::Base.smtp_settings = {
+      :address        => "smtp.sendgrid.net",
+      :port           => "25",
+      :authentication => :plain,
+      :user_name      => 'devscoop@gmail.com',
+      :password       => 'sh0rtfu$e'
+    }
   end
 end

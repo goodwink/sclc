@@ -1,0 +1,8 @@
+%h4= @invitation.user.login_name + " (#{@invitation.user.email}) has invited you to sclc"
+
+%p
+  Your invitation code is shown below, please visit
+  %a{:href => "http://sclc-staging.devscoop.com/users/new"} sclc
+  to join!
+  
+%p= @invitation.code
