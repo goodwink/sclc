@@ -38,15 +38,5 @@ Sclc::Application.configure do
         end
       end
     end
-    
-    module Mail
-      class Message
-        def deliver
-          inform_interceptors
-          inform_observers
-          self
-        end
-      end
-    end
   end
 end
