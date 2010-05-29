@@ -1,0 +1,10 @@
+%p
+  %b Publisher:
+  = @subscription.publisher_id
+%p
+  %b Expires at:
+  = @subscription.expires_at
+
+= link_to 'Edit', edit_subscription_path(@subscription)
+\|
+= link_to 'Back', subscriptions_path

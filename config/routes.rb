@@ -1,4 +1,6 @@
 Sclc::Application.routes.draw do |map|
+  resources :subscriptions
+
   resources :invitations
 
   resources :users

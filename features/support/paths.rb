@@ -16,6 +16,9 @@ module NavigationHelpers
       
     when /my Invitation Page/
       '/invitations/new'
+      
+    when /my Friends Page/
+      '/subscriptions'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

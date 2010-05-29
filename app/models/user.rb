@@ -1,8 +1,10 @@
 require 'digest/sha1'
 
 class User < ActiveRecord::Base
-  has_many :invitations
-  has_one :original_invitation, :class_name => "Invitation", :foreign_key => "invited_user_id"
+  has_many  :invitations
+  has_many  :subscriptions, :class_name => "Subscription", :foreign_key => "subscriber_id"
+  has_many  :publications, :class_name => "Subscription", :foreign_key => "publisher_id"
+  has_one   :original_invitation, :class_name => "Invitation", :foreign_key => "invited_user_id"
   
   validates :login_name, :presence => true, :uniqueness => true
   validates :email, :presence => true, :uniqueness => true
