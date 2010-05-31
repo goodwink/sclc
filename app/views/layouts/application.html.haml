@@ -1,0 +1,34 @@
+%html
+  %head
+    = csrf_meta_tag
+    = stylesheet_link_tag :all
+    = javascript_include_tag :defaults
+  %body
+    #header-logo
+      %img{:alt => "logo", :height => "124", :src => "/images/logo.png", :width => "262"}/
+    #header-menu
+      .image-container
+        %img{:alt => "leftborder", :height => "151", :src => "/images/leftborder.png", :width => "65"}/
+      .image-container
+        %a#invite{:href => new_invitation_path}
+          %img{:alt => "invite", :height => "151", :src => "/images/invite.png", :width => "202"}/
+      .image-container
+        %a#tunein{:href => subscriptions_path}
+          %img{:alt => "tunein", :height => "151", :src => "/images/tunein.png", :width => "199"}/
+      .image-container
+        %a#showup{:href => "#"}
+          %img{:alt => "showup", :height => "151", :src => "/images/showup.png", :width => "201"}/
+      .image-container
+        %a#find{:href => "#"}
+          %img{:alt => "find", :height => "151", :src => "/images/find.png", :width => "201"}/
+      .image-container
+        %img{:alt => "rightborder", :height => "151", :src => "/images/rightborder.png", :width => "156"}/
+    #content
+      - if flash[:alert]
+        .alert= flash[:alert]
+      - if flash[:notice]
+        .notice= flash[:notice]
+      = yield
+    #selection.image-container
+      %img{:alt => "selection", :height => "24", :src => "/images/selection.png", :width => "32"}/
+      
